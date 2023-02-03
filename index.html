@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+       <script src="createBillet.js"></script>
+       <script src="apiClient.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h2 id="hid">Enregistrement à la conférence <br>du 17 juin 2023</h2>
+        <div id="success" class="suc"><h2>Welcome !<br>
+        
+        </h2></div>
+        <div id="error_message"></div>
+            <div class="input_field">
+                <input type="text" placeholder="First Name" id="name">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Last Name" id="lastName">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Email pour le ebillet" id="email">
+            </div>
+            <div class="input_field">
+                <input type="checkbox" placeholder="paiement" id="virement"> Virement
+                <input type="checkbox" placeholder="paiement" id="cheque"> Chèque 
+                <input type="checkbox" placeholder="paiement" id="espece"> Espèce 
+            </div>
+          
+            <button onclick="inscription()" >Valider </button>
+       
+    </div>
+  <div class="creds">Created by <a href="https://" target="_blank">Mdm development</a></div>
+</body>
+</html>
