@@ -16,3 +16,5 @@ var qrcode = new QRCode("qrcode", {
 qrcode.makeCode(verifBillet);
 
 
+let numBilletUnique = document.querySelector("#numEbillet");
+numBilletUnique.innerHTML = 'E-Billet N° ' +id

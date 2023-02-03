@@ -39,7 +39,7 @@ async function inscription(){
     const newBillet = await createBillet(newBilletInfo,newToken )
     console.log(newBillet.objectId);
     //genere le new billet avec nouvelle url
-    document.location.href='billet.html?id='+ newBillet.objectId
+    document.location.href='billet/billet.html?id='+ newBillet.objectId
 }
 
 
