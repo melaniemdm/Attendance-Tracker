@@ -1,8 +1,14 @@
+
 .containerEbillet{
   width: 650px;
   height: 650px;
 }
-
+#numEbillet{
+  color: red;
+  z-index: 6;
+  margin-left: 580px;
+  margin-top: -38px;
+ }
 
 #eBillet {
   background-image: url("../images/billet.png");
@@ -13,6 +19,6 @@
 
 #qrcode{
 z-index: 5;
-margin-top: -200px;
-margin-left: 510px;
+margin-top:-200px; 
+margin-left:520px ;
 }
