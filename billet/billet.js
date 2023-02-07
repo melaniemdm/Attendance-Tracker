@@ -7,7 +7,7 @@ let id = url.searchParams.get("id")
 console.log(id)
 
 // construction de l'url de verif de billet
-const verifBillet= window.location.protocol+ "//" +window.location.host+"/verifBillet.html?id="+id
+const verifBillet= window.location.protocol+ "//" +window.location.host+"/verif-Billet/verifBillet.html?id="+id
 
 var qrcode = new QRCode("qrcode", {
 	width : 100,
@@ -15,6 +15,7 @@ var qrcode = new QRCode("qrcode", {
 });
 qrcode.makeCode(verifBillet);
 
+console.log(verifBillet)
 
 let numBilletUnique = document.querySelector("#numEbillet");
 numBilletUnique.innerHTML = 'E-Billet N° ' +id
