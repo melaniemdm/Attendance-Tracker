@@ -27,3 +27,10 @@ async function getBillet(token, idBillet){
     return response.data
     
 }
+
+//modification du billet
+async function updateBillet(token, idBillet){
+    const response= await axios.put(urlBillet + idBillet,{'est_scanne': true},{headers:{'X-Parse-Application-Id': 'Es5seTH8kI3oSdINW5hz4oiisXxVpgzUvswk4G8C','X-Parse-REST-API-Key':'eq8RCMtAe6KvTnXwJMF9cDEVYL79gTMrr7tLW4VD','X-Parse-Session-Token': token, 'Content-Type': 'application/json'}})
+    return response.data
+    
+}

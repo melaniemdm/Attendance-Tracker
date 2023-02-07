@@ -21,6 +21,8 @@ async function main(){
     monImage.src = "../images/refuse.png"  
     }else{
         monImage.src ="../images/valide.png"   
+        const updatedBillet= await updateBillet(newToken, id)
+        console.log(updatedBillet)
     }
    
   
