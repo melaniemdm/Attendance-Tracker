@@ -7,7 +7,8 @@ let id = url.searchParams.get("id")
 console.log(id)
 
 // construction de l'url de verif de billet
-const verifBillet= window.location.protocol+ "//" +window.location.host+"/Attendance-Tracker/verif-Billet/verifBillet.html?id="+id
+const url_complement = deploiement==="github"?'/Attendance-Tracker':"";
+const verifBillet= window.location.protocol+ "//" +window.location.host+ url_complement +"/verif-Billet/verifBillet.html?id="+id
 
 var qrcode = new QRCode("qrcode", {
 	width : 100,
