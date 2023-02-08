@@ -20,13 +20,13 @@ async function inscription(){
         return false;
     }
     let paiement = "";
-    if(document.querySelector('#virement').value){
+    if(document.querySelector('#virement').checked === true){
         paiement = 'virement'
     }
-    if(document.querySelector('#cheque').value){
+    if(document.querySelector('#cheque').checked === true){
         paiement = 'cheque'
     }
-    if(document.querySelector('#espece').value){
+    if(document.querySelector('#espece').checked === true){
         paiement = 'espece'
     }
     const newBilletInfo={
