@@ -15,12 +15,18 @@ async function main(){
     const newToken = await getAuthorization()
     // recupere le billet dans le backend
     const billet = await getBillet(newToken, id)
-    console.log(billet)
+    console.log(billet["nom"])
+    
     const monImage = document.createElement("img");
+    const nameItem= document.querySelector("#name")
+   
     if(billet.est_scanne===true){
-    monImage.src = "../images/refuse.png"  
+    monImage.src = "../images/refuse.png" 
+    nameItem.innerHTML= "Vous ne pouvez pas rentrer ! " + billet["prenom" ] + " BILLET scanné à " + billet["updatedAt" ] ;
+   
     }else{
-        monImage.src ="../images/valide.png"   
+        monImage.src ="../images/valide.png" 
+        nameItem.innerHTML= "Welcome " + billet["prenom"];
         const updatedBillet= await updateBillet(newToken, id)
         console.log(updatedBillet)
     }

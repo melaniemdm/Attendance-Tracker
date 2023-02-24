@@ -37,6 +37,7 @@ async function inscription(){
     }
     const newToken = await getAuthorization()
     const newBillet = await createBillet(newBilletInfo,newToken )
+  /* Logging the newBillet.objectId to the console. */
     console.log(newBillet.objectId);
     //genere le new billet avec nouvelle url
     const url_complement = deploiement==="github"?'/Attendance-Tracker':"";
